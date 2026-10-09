@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Billing Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+
+            <div>
+                <p class="small-title">SMART SYSTEM</p>
+                <h1>Billing Generator</h1>
+                <p class="subtitle">
+                    Manage products and generate your bill easily
+                </p>
+            </div>
+
+          
+
+        </div>
+
+
+        <!-- PRODUCT INPUT SECTION -->
+        <div class="input-card">
+
+            <h2>Add Product</h2>
+
+            <div class="input-grid">
+
+                <div class="input-box">
+                    <label>Product Name</label>
+
+                    <input
+                        type="text"
+                        id="productName"
+                        placeholder="Enter product name">
+                </div>
+
+
+                <div class="input-box">
+                    <label>Product Price</label>
+
+                    <input
+                        type="number"
+                        id="productPrice"
+                        placeholder="Enter price">
+                </div>
+
+
+                <div class="input-box">
+                    <label>Quantity</label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        placeholder="Enter quantity"
+                        min="1">
+                </div>
+
+            </div>
+
+
+            <button class="add-btn" onclick="addProduct()">
+                + Add Product
+            </button>
+
+        </div>
+
+
+        <!-- BILL SECTION -->
+        <div class="bill-card">
+
+            <div class="bill-header">
+
+                <div>
+                    <h2>Product Bill</h2>
+
+                    <p>
+                        Check product price and generate total
+                    </p>
+                </div>
+
+                <div class="bill-number">
+                    BILL #001
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>S.No</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="billTable">
+
+                        <tr id="emptyRow">
+
+                            <td colspan="6">
+
+                                <div class="empty">
+
+                                    <div class="empty-icon">
+                                        
+                                    </div>
+
+                                    <h3>No products added</h3>
+
+                                    <p>
+                                        Add a product to generate your bill
+                                    </p>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- TOTAL -->
+            <div class="total-section">
+
+                <div class="total-label">
+                    <span>Grand Total</span>
+
+                    <strong id="grandTotal">
+                        ₹0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+            <div class="actions">
+
+                <button class="clear-btn" onclick="clearBill()">
+                    Clear Bill
+                </button>
+
+                <button class="print-btn" onclick="printBill()">
+                     Print Bill
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <p class="footer">
+            Smart Billing System • JavaScript Project
+        </p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
